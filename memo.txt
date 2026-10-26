@@ -1,0 +1,33 @@
+The doctor reporting system uses a binary tree because 
+a tree represents hierarchical relationships naturally. 
+Each doctor is represented by a node that can have up 
+to two direct reports. This structure makes it possible 
+to model a reporting hierarchy and recursively explore 
+the organization. The insert method locates a parent and 
+places a new doctor on the requested side, while checking 
+for invalid sides, missing parents, and occupied positions. 
+A binary tree is appropriate for this assignment's simplified 
+model, although a general tree would be more suitable if 
+doctors could supervise more than two people.
+
+Tree traversal methods are useful for different tasks. Preorder 
+visits a node before its children, making it useful for displaying 
+a hierarchy or copying a tree structure. Inorder visits the 
+left subtree before the node and the right subtree afterward. 
+It is especially useful for retrieving sorted values from a 
+binary search tree. Postorder visits children before their parent, 
+making it useful for deleting tree structures, evaluating expression 
+trees, or processing dependencies from the bottom up. The order of 
+traversal determines when each node is processed.
+
+The emergency intake system uses a min-heap because patients must 
+be prioritized by urgency rather than arrival time. Each patient 
+receives a score from 1 to 10, with lower values indicating greater 
+urgency. Insertion uses heapify_up to restore the heap property, 
+while removal replaces the root with the last patient and uses 
+heapify_down. These operations take O(log n) time, and peeking at 
+the highest priority patient takes O(1) time. A heap therefore 
+supports efficient priority based scheduling as patient arrivals 
+and removals occur. In a real hospital, additional triage rules, 
+equal priority handling, and clinical safeguards would also be 
+necessary.
